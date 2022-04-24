@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Tugas Pemweb Nani</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;" >Selamat Datang</h1>
+    <script src="dist/sweetalert2.all.min.js" ></script>
+ <form>
+     <div class="form-group">
+       <label for="exampleInputEmail1">Nama Lengkap</label>
+       <input type="text" name="nama" placeholder="Nama Lengkap" class="form-control" >
+     </div>
+     <div class="form-group">
+         <label for="exampleInputEmail1">Email</label>
+         <input type="email" placeholder="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+         <small id="emailHelp" class="form-text text-muted"></small>
+       </div>
+     <div class="form-group">
+       <label for="exampleInputPassword1">Password</label>
+       <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
+     </div>
+                    <div class="form-group">
+                        <label>Pekerjaan</label>
+                <select name="Pekerjaan" class="form-control">
+                  <option value="0">Pilih Pekerjaan</option>
+                  <option value="1">Karyawan/Pegawai</option>
+                  <option value="2">Wiraswasta</option>
+                  <option value="3">Polisi/Tentara</option>
+                  <option value="4">Dokter/Perawat</option>
+                  <option value="5">Petani/Nelayan</option>
+                  <option value="6">Mahasiswa</option>
+              </select>
+                    </div>
+                    <center>
+                    <div class="form-group">
+                        <button type="button" id="tombol">Submit</button>
+                    </center>
+                    </div>
+                </form>
+            </div>
+            <div class="table">
+                <table>
+                    <div class="header">
+                        <h3>Brosur Toyota</h3>
+                    </div>
+                </form> <br> <br>
+                <table style="text-align: center;" class="table table-sm table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Konfirmasi</th>
+                          </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Toyota New Calya</td>
+                            <td>1.2 E STD [BASIC] M/T</td>
+                            <td>Rp 169.200.000</td>
+                            <td> 
+                                <button type="button" class="btn btn-danger" onclick="hapus()">Hapus</button>
+                                <button type="button" class="btn btn-warning" onclick="ubah()">Ubah</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Toyota Avanza GR</td>
+                            <td>1.3 E A/T</td>
+                            <td>Rp 267.600.000</td>
+                            <td>
+                                <button type="button" class="btn btn-danger" onclick="hapus()">Hapus</button>
+                                <button type="button" class="btn btn-warning" onclick="ubah()">Ubah</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Toyota New Veloz GR</td>
+                            <td>1.5 Veloz M/T</td>
+                            <td>Rp 307.200.000</td>
+                            <td>
+                                <button type="button" class="btn btn-danger" onclick="hapus()">Hapus</button>
+                                <button type="button" class="btn btn-warning" onclick="ubah()">Ubah</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Toyota New Yaris GR Sport</td>
+                            <td>1.5 G 3 AIRBAGS A/T</td>
+                            <td>Rp 314.300.000</td>
+                            <td>
+                                <button type="button" class="btn btn-danger" onclick="hapus()">Hapus</button>
+                                <button type="button" class="btn btn-warning" onclick="ubah()">Ubah</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Toyota All New Raize GR Sport</td>
+                            <td>Raize 1.2G (One Tone) MT</td>
+                            <td>Rp 244.700.000</td>
+                        <td>
+                                <button type="button" class="btn btn-danger" onclick="hapus()">Hapus</button>
+                                <button type="button" class="btn btn-warning" onclick="ubah()">Ubah</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="footer">
+                <h6 style="text-align: center;" > <i>Ni Nengah Widiani F52120012</i></h6>
+            </div>
+        </div>
+    </div>
+    <script src="sweetalert2.all.min.js"></script>
+    <script>
+        var tombol = document.querySelector('#tombol');
+        tombol.addEventListener('click', function () {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: 'Data Berhasil Diinput!!!',
+            })
+        });
+    </script>
+    <script>
+        function ubah() {
+
+
+            Swal.fire({
+                    title: 'Mengubah Data!',
+                    text: "Apakah Anda Yakin Ingin Mengubah Data?",
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes!'
+                })
+                .then((result) => {
+                    /* Read more about isConfirmed, isDenied below */
+                    if (result.isConfirmed) {
+                        Swal.fire('Data Berhasil Diubah!', '', 'success')
+                    }
+                })
+        };
+    </script>
+    <script>
+        function hapus() {
+            Swal.fire({
+                    title: 'Menghapus Data!',
+                    text: "Apakah Anda Yakin Ingin Menghapus Data?",
+                    icon: 'error',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes!'
+                })
+                .then((result) => {
+                    /* Read more about isConfirmed, isDenied below */
+                    if (result.isConfirmed) {
+                        Swal.fire('Data Berhasil Dihapus!', '', 'success')
+                    }
+                })
+        }
+    </script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
